@@ -1,10 +1,5 @@
 # TPM 2.0 docker container for experimenting
 
-## Licenses
-
-    The base image for the container is **alpine:latest**.
-
-
 Software needed for the actual end functionality is the TCG TPM2 Software Stack
 (TSS2) and the IBM TPM simulator.
 
@@ -14,40 +9,13 @@ Software needed for the actual end functionality is the TCG TPM2 Software Stack
 *  [IBM simulator](./licenses/LICENSE-ibm-tpm-simulator) License included in the
 package, extracted here for convenience.
 
-Linux dependecies for building the TCG TPM2 Software Stack are:
-
-* autoconf
-* autoconf-archive
-* automake
-* libtool
-* build-base
-* pkgconf
-* doxygen
-* json-c-dev
-* openssl
-* openssl-dev
-* libssl1.1
-* git
-* udev 
-* dbus
-* curl-dev
-* linux-headers
-* glib-dev
-* libconfig-dev
-* libgcrypt-dev
-* wget
-
-It is possible to further strip down dependecies, some packages are only used for
-building the documentation which is not in use inside the container as
-default.
-
 ## Download the container
 
-TODO...will be pushed to dockerhub for download.
+To be added on DockerHub...
 
 ## Building the container
 
-Building from source, download repo and run from the repo folder:
+Building from source, download repo and pick distribution. Run from the distro folder:
 
     docker build -t tpm2-sim:latest .
 
