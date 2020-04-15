@@ -1,5 +1,5 @@
 #TPM2 simulator
-FROM ubuntu:disco
+FROM ubuntu:focal
 LABEL Maintainer="Ronny Backman <ronny.backman@nokia.com>"
 LABEL version="1.0"
 LABEL description="Base image for running TPM2 Software Stack (TSS), Access \
@@ -8,13 +8,14 @@ Broker & Resource Management Daemon (ABRMD) and tools with IBM tpm simulator"
 ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
 ENV LANGUAGE C.UTF-8
+ENV DEBIAN_FRONTEND noninteractive
 
 COPY open-source-tpm-ubuntu-spdx.rdf /
 
 # Installing needed dependecies and tools for building
 
 RUN apt update && \
-    apt -y install \
+    apt install -y \
     autoconf-archive \
     libcmocka0 \
     libcmocka-dev \

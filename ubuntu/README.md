@@ -1,9 +1,6 @@
-# TPM 2.0 docker container for experimenting
+# Ubuntu container
 
-## Licenses
-
-The base image for the container is **ubuntu:disco** (Ubuntu 19.04 / Debian
-Buster - Sid).
+The base image for the container is **ubuntu:focal** -- Ubuntu 20.04.
 
 Dependecies for building the TCG TPM2 Software Stack are:
 
