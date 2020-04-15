@@ -1,0 +1,986 @@
+<rdf:RDF
+    xmlns:spdx="http://spdx.org/rdf/terms#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:doap="http://usefulinc.com/ns/doap#"
+    xmlns="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <spdx:SpdxDocument rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-DOCUMENT">
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-49">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>8.0.0</spdx:versionInfo>
+            <spdx:downloadLocation>
+              <spdx:noassertion rdf:about="http://spdx.org/rdf/terms#noassertion"/>
+            </spdx:downloadLocation>
+            <spdx:licenseDeclared>
+              <spdx:none rdf:about="http://spdx.org/rdf/terms#none"/>
+            </spdx:licenseDeclared>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>Readline</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-31">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>libgcrypt-1.8.5</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>libgcrypt</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-48">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>3.7.5</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>Python programming language</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-43">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>1.2.3</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>PaX Utilities</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-52">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>1.20.3</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>Wget</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:name>open-source-tpm-alpine:latest Bill Of Materials</spdx:name>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-17">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>6.1.2</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>GMP</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-34">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>2.9.1</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>LibreSSL Portable Security Libraries</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-50">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>3.28.0</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>SQLite</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-42">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>1.1.1d</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>OpenSSL</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-11">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>1.8.15</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>doxygen-doc</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-25">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>6.1_p20190518</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>GNU Ncurses</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-20">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>0.19.8.1</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>GNU Gettext</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-19">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>8.3.0</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>GNU Compiler Collection</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-36">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>1.1.33</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>libxslt</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-5">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>5.0.0</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>Bash</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-37">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>4.19.36</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>linux-headers</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-27">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>0.13.1</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>json-c</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-28">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>24</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>kmod-libs</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-45">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>10.33</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>PCRE2</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-4">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>2.10.4</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>apk-tools</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-16">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>2.60.4</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>GLib</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-44">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>8.43</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>PCRE</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-53">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>5.2.4</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>XZ Utils</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-13">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>2.2.8</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>expat-doc</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-39">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>3.1.5</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>mpfr-dev</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-9">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>7.66.0</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>cURL</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-26">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>0.18</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>isl</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-51">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>2.33.2</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>util-linux</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:specVersion>SPDX-2.1</spdx:specVersion>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-6">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>1_30_1</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>BusyBox</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-12">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>3.2.8</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>eudev</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-22">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>0.9.10</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>GNU libunistring</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-21">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>2.4.6</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>GNU Libtool</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-38">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>1.1.0</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>mpc</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-54">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>1.2.11</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>zlib</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:dataLicense>
+      <spdx:License rdf:about="http://spdx.org/licenses/CC0-1.0">
+        <spdx:standardLicenseTemplate>
+      &lt;&lt;beginOptional&gt;&gt; &lt;&lt;beginOptional&gt;&gt; Creative Commons&lt;&lt;beginOptional&gt;&gt; Legal Code&lt;&lt;endOptional&gt;&gt;&lt;&lt;endOptional&gt;&gt;
+CC0 1.0 Universal&lt;&lt;endOptional&gt;&gt;&lt;&lt;beginOptional&gt;&gt; CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE LEGAL SERVICES. DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN ATTORNEY-CLIENT RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS INFORMATION ON AN "AS-IS" BASIS. CREATIVE COMMONS MAKES NO WARRANTIES REGARDING THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS PROVIDED HEREUNDER, AND DISCLAIMS LIABILITY FOR DAMAGES RESULTING FROM THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS PROVIDED HEREUNDER.&lt;&lt;endOptional&gt;&gt;
+Statement of Purpose
+The laws of most jurisdictions throughout the world automatically confer exclusive Copyright and Related Rights (defined below) upon the creator and subsequent owner(s) (each and all, an "owner") of an original work of authorship and/or a database (each, a "Work").
+Certain owners wish to permanently relinquish those rights to a Work for the purpose of contributing to a commons of creative, cultural and scientific works ("Commons") that the public can reliably and without fear of later claims of infringement build upon, modify, incorporate in other works, reuse and redistribute as freely as possible in any form whatsoever and for any purposes, including without limitation commercial purposes. These owners may contribute to the Commons to promote the ideal of a free culture and the further production of creative, cultural and scientific works, or to gain reputation or greater distribution for their Work in part through the use and efforts of others.
+For these and/or other purposes and motivations, and without any expectation of additional consideration or compensation, the person associating CC0 with a Work (the "Affirmer"), to the extent that he or she is an owner of Copyright and Related Rights in the Work, voluntarily elects to apply CC0 to the Work and publicly distribute the Work under its terms, with knowledge of his or her Copyright and Related Rights in the Work and the meaning and intended legal effect of CC0 on those rights.
+   &lt;&lt;var;name="bullet";original="1.";match=".{0,20}"&gt;&gt; Copyright and Related Rights. A Work made available under CC0 may be protected by copyright and related or neighboring rights ("Copyright and Related Rights"). Copyright and Related Rights include, but are not limited to, the following:
+      &lt;&lt;var;name="bullet";original="i.";match=".{0,20}"&gt;&gt; the right to reproduce, adapt, distribute, perform, display, communicate, and translate a Work;
+      &lt;&lt;var;name="bullet";original="ii.";match=".{0,20}"&gt;&gt; moral rights retained by the original author(s) and/or performer(s);
+      &lt;&lt;var;name="bullet";original="iii.";match=".{0,20}"&gt;&gt; publicity and privacy rights pertaining to a person's image or likeness depicted in a Work;
+      &lt;&lt;var;name="bullet";original="iv.";match=".{0,20}"&gt;&gt; rights protecting against unfair competition in regards to a Work, subject to the limitations in paragraph 4(a), below;
+      &lt;&lt;var;name="bullet";original="v.";match=".{0,20}"&gt;&gt; rights protecting the extraction, dissemination, use and reuse of data in a Work;
+      &lt;&lt;var;name="bullet";original="vi.";match=".{0,20}"&gt;&gt; database rights (such as those arising under Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, and under any national implementation thereof, including any amended or successor version of such directive); and
+      &lt;&lt;var;name="bullet";original="vii.";match=".{0,20}"&gt;&gt; other similar, equivalent or corresponding rights throughout the world based on applicable law or treaty, and any national implementations thereof.
+   &lt;&lt;var;name="bullet";original="2.";match=".{0,20}"&gt;&gt; Waiver. To the greatest extent permitted by, but not in contravention of, applicable law, Affirmer hereby overtly, fully, permanently, irrevocably and unconditionally waives, abandons, and surrenders all of Affirmer's Copyright and Related Rights and associated claims and causes of action, whether now known or unknown (including existing as well as future claims and causes of action), in the Work (i) in all territories worldwide, (ii) for the maximum duration provided by applicable law or treaty (including future time extensions), (iii) in any current or future medium and for any number of copies, and (iv) for any purpose whatsoever, including without limitation commercial, advertising or promotional purposes (the "Waiver"). Affirmer makes the Waiver for the benefit of each member of the public at large and to the detriment of Affirmer's heirs and successors, fully intending that such Waiver shall not be subject to revocation, rescission, cancellation, termination, or any other legal or equitable action to disrupt the quiet enjoyment of the Work by the public as contemplated by Affirmer's express Statement of Purpose.
+   &lt;&lt;var;name="bullet";original="3.";match=".{0,20}"&gt;&gt; Public License Fallback. Should any part of the Waiver for any reason be judged legally invalid or ineffective under applicable law, then the Waiver shall be preserved to the maximum extent permitted taking into account Affirmer's express Statement of Purpose. In addition, to the extent the Waiver is so judged Affirmer hereby grants to each affected person a royalty-free, non transferable, non sublicensable, non exclusive, irrevocable and unconditional license to exercise Affirmer's Copyright and Related Rights in the Work (i) in all territories worldwide, (ii) for the maximum duration provided by applicable law or treaty (including future time extensions), (iii) in any current or future medium and for any number of copies, and (iv) for any purpose whatsoever, including without limitation commercial, advertising or promotional purposes (the "License"). The License shall be deemed effective as of the date CC0 was applied by Affirmer to the Work. Should any part of the License for any reason be judged legally invalid or ineffective under applicable law, such partial invalidity or ineffectiveness shall not invalidate the remainder of the License, and in such case Affirmer hereby affirms that he or she will not (i) exercise any of his or her remaining Copyright and Related Rights in the Work or (ii) assert any associated claims and causes of action with respect to the Work, in either case contrary to Affirmer's express Statement of Purpose.
+   &lt;&lt;var;name="bullet";original="4.";match=".{0,20}"&gt;&gt; Limitations and Disclaimers.
+      &lt;&lt;var;name="bullet";original="a.";match=".{0,20}"&gt;&gt; No trademark or patent rights held by Affirmer are waived, abandoned, surrendered, licensed or otherwise affected by this document.
+      &lt;&lt;var;name="bullet";original="b.";match=".{0,20}"&gt;&gt; Affirmer offers the Work as-is and makes no representations or warranties of any kind concerning the Work, express, implied, statutory or otherwise, including without limitation warranties of title, merchantability, fitness for a particular purpose, non infringement, or the absence of latent or other defects, accuracy, or the present or absence of errors, whether or not discoverable, all to the greatest extent permissible under applicable law.
+      &lt;&lt;var;name="bullet";original="c.";match=".{0,20}"&gt;&gt; Affirmer disclaims responsibility for clearing rights of other persons that may apply to the Work or any use thereof, including without limitation any person's Copyright and Related Rights in the Work. Further, Affirmer disclaims responsibility for obtaining any necessary consents, permissions or other rights required for any use of the Work.
+      &lt;&lt;var;name="bullet";original="d.";match=".{0,20}"&gt;&gt; Affirmer understands and acknowledges that Creative Commons is not a party to this document and has no duty or obligation with respect to this CC0 or use of the Work.
+      </spdx:standardLicenseTemplate>
+        <spdx:standardLicenseHeader>
+        &lt;p xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic"&gt;There is no standard license header for the license&lt;/p&gt;
+        
+      </spdx:standardLicenseHeader>
+        <spdx:licenseText>
+Creative Commons Legal Code 
+CC0 1.0 Universal 
+CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE LEGAL SERVICES. DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN ATTORNEY-CLIENT RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS INFORMATION ON AN "AS-IS" BASIS. CREATIVE COMMONS MAKES NO WARRANTIES REGARDING THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS PROVIDED HEREUNDER, AND DISCLAIMS LIABILITY FOR DAMAGES RESULTING FROM THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS PROVIDED HEREUNDER. 
+Statement of Purpose 
+The laws of most jurisdictions throughout the world automatically confer exclusive Copyright and Related Rights (defined below) upon the creator and subsequent owner(s) (each and all, an "owner") of an original work of authorship and/or a database (each, a "Work"). 
+Certain owners wish to permanently relinquish those rights to a Work for the purpose of contributing to a commons of creative, cultural and scientific works ("Commons") that the public can reliably and without fear of later claims of infringement build upon, modify, incorporate in other works, reuse and redistribute as freely as possible in any form whatsoever and for any purposes, including without limitation commercial purposes. These owners may contribute to the Commons to promote the ideal of a free culture and the further production of creative, cultural and scientific works, or to gain reputation or greater distribution for their Work in part through the use and efforts of others. 
+For these and/or other purposes and motivations, and without any expectation of additional consideration or compensation, the person associating CC0 with a Work (the "Affirmer"), to the extent that he or she is an owner of Copyright and Related Rights in the Work, voluntarily elects to apply CC0 to the Work and publicly distribute the Work under its terms, with knowledge of his or her Copyright and Related Rights in the Work and the meaning and intended legal effect of CC0 on those rights. 1. Copyright and Related Rights. A Work made available under CC0 may be protected by copyright and related or neighboring rights ("Copyright and Related Rights"). Copyright and Related Rights include, but are not limited to, the following: i. the right to reproduce, adapt, distribute, perform, display, communicate, and translate a Work; ii. moral rights retained by the original author(s) and/or performer(s); iii. publicity and privacy rights pertaining to a person's image or likeness depicted in a Work; iv. rights protecting against unfair competition in regards to a Work, subject to the limitations in paragraph 4(a), below; v. rights protecting the extraction, dissemination, use and reuse of data in a Work; vi. database rights (such as those arising under Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, and under any national implementation thereof, including any amended or successor version of such directive); and vii. other similar, equivalent or corresponding rights throughout the world based on applicable law or treaty, and any national implementations thereof. 2. Waiver. To the greatest extent permitted by, but not in contravention of, applicable law, Affirmer hereby overtly, fully, permanently, irrevocably and unconditionally waives, abandons, and surrenders all of Affirmer's Copyright and Related Rights and associated claims and causes of action, whether now known or unknown (including existing as well as future claims and causes of action), in the Work (i) in all territories worldwide, (ii) for the maximum duration provided by applicable law or treaty (including future time extensions), (iii) in any current or future medium and for any number of copies, and (iv) for any purpose whatsoever, including without limitation commercial, advertising or promotional purposes (the "Waiver"). Affirmer makes the Waiver for the benefit of each member of the public at large and to the detriment of Affirmer's heirs and successors, fully intending that such Waiver shall not be subject to revocation, rescission, cancellation, termination, or any other legal or equitable action to disrupt the quiet enjoyment of the Work by the public as contemplated by Affirmer's express Statement of Purpose. 3. Public License Fallback. Should any part of the Waiver for any reason be judged legally invalid or ineffective under applicable law, then the Waiver shall be preserved to the maximum extent permitted taking into account Affirmer's express Statement of Purpose. In addition, to the extent the Waiver is so judged Affirmer hereby grants to each affected person a royalty-free, non transferable, non sublicensable, non exclusive, irrevocable and unconditional license to exercise Affirmer's Copyright and Related Rights in the Work (i) in all territories worldwide, (ii) for the maximum duration provided by applicable law or treaty (including future time extensions), (iii) in any current or future medium and for any number of copies, and (iv) for any purpose whatsoever, including without limitation commercial, advertising or promotional purposes (the "License"). The License shall be deemed effective as of the date CC0 was applied by Affirmer to the Work. Should any part of the License for any reason be judged legally invalid or ineffective under applicable law, such partial invalidity or ineffectiveness shall not invalidate the remainder of the License, and in such case Affirmer hereby affirms that he or she will not (i) exercise any of his or her remaining Copyright and Related Rights in the Work or (ii) assert any associated claims and causes of action with respect to the Work, in either case contrary to Affirmer's express Statement of Purpose. 4. Limitations and Disclaimers. a. No trademark or patent rights held by Affirmer are waived, abandoned, surrendered, licensed or otherwise affected by this document. b. Affirmer offers the Work as-is and makes no representations or warranties of any kind concerning the Work, express, implied, statutory or otherwise, including without limitation warranties of title, merchantability, fitness for a particular purpose, non infringement, or the absence of latent or other defects, accuracy, or the present or absence of errors, whether or not discoverable, all to the greatest extent permissible under applicable law. c. Affirmer disclaims responsibility for clearing rights of other persons that may apply to the Work or any use thereof, including without limitation any person's Copyright and Related Rights in the Work. Further, Affirmer disclaims responsibility for obtaining any necessary consents, permissions or other rights required for any use of the Work. d. Affirmer understands and acknowledges that Creative Commons is not a party to this document and has no duty or obligation with respect to this CC0 or use of the Work.</spdx:licenseText>
+        <rdfs:seeAlso>http://creativecommons.org/publicdomain/zero/1.0/legalcode</rdfs:seeAlso>
+        <spdx:name>Creative Commons Zero v1.0 Universal</spdx:name>
+        <spdx:licenseId>CC0-1.0</spdx:licenseId>
+      </spdx:License>
+    </spdx:dataLicense>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-7">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>1.0.6</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>bzip2-old</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-47">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>1.6.1</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>pkgconf</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_describes"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-1">
+            <spdx:versionInfo>latest</spdx:versionInfo>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:name>open-source-tpm-alpine</spdx:name>
+            <spdx:downloadLocation>https://blackduck-prod.westeurope.cloudapp.azure.com/api/projects/154741c1-03ec-4132-8761-535435227e5c/versions/f6ca3094-6ae6-4fd9-9055-f38fda9283fb/components</spdx:downloadLocation>
+            <spdx:supplier rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <doap:homepage>http://www.blackducksoftware.com</doap:homepage>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:originator rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+        <rdfs:comment>top level comment</rdfs:comment>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-14">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>5.37</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>file</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-30">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>3.2.1</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>libffi</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-46">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>v5.28.2</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>Perl</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-10">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>1.12.16</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>D-Bus</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-15">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>2.22.2</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>Git</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:creationInfo>
+      <spdx:CreationInfo>
+        <spdx:creator>Tool: Black Duck Hub SPDX Report Generator</spdx:creator>
+        <spdx:licenseListVersion>3.0</spdx:licenseListVersion>
+        <spdx:created>2020-04-07T14:43:16Z</spdx:created>
+      </spdx:CreationInfo>
+    </spdx:creationInfo>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-29">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>v1.7.2</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>Libconfig - Configuration File Library</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-35">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>2.9.9</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>libxml2</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-8">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>20190108</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>ca-certificates</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-24">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>4.2.1</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>GNU Make</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-40">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>1.1.22</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>musl</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-33">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>1.36</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>libgpg-error</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-2">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>3.1.2</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>alpine-baselayout</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-23">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>1.4.18</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>GNU M4</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-18">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>2.32</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>GNU Binutils</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-3">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>2.1</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>alpine-keys</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-41">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>1.39.2</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>nghttp2</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+    <spdx:relationship>
+      <spdx:Relationship>
+        <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_dynamicLink"/>
+        <spdx:relatedSpdxElement>
+          <spdx:Package rdf:about="http://blackducksoftware.com/hub/open-source-tpm-alpine/latest#SPDXRef-32">
+            <spdx:filesAnalyzed>false</spdx:filesAnalyzed>
+            <spdx:versionInfo>1.13</spdx:versionInfo>
+            <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#none"/>
+            <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+            <spdx:name>libgdbm</spdx:name>
+          </spdx:Package>
+        </spdx:relatedSpdxElement>
+      </spdx:Relationship>
+    </spdx:relationship>
+  </spdx:SpdxDocument>
+</rdf:RDF>
