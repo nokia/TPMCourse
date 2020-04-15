@@ -6,8 +6,7 @@ Software needed for the actual end functionality is the TCG TPM2 Software Stack
 *  [TPM2-tss](https://github.com/tpm2-software/tpm2-tss) BSD-2-Clause
 *  [TPM2-abrmd](https://github.com/tpm2-software/tpm2-abrmd) BSD-2-Clause
 *  [TPM2-tools](https://github.com/tpm2-software/tpm2-tools) BSD-3-Clause
-*  [IBM simulator](./licenses/LICENSE-ibm-tpm-simulator) License included in the
-package, extracted here for convenience.
+*  [IBM simulator](./licenses/LICENSE-ibm-tpm-simulator)
 
 ## Download the container
 
@@ -17,11 +16,11 @@ To be added on DockerHub...
 
 Building from source, download repo and pick distribution. Run from the distro folder:
 
-    docker build -t tpm2-sim:latest .
+    docker build -t tpmcourse:latest .
 
 Then run with:
 
-    docker run -it tpm2-sim:latest
+    docker run -it tpmcourse:latest
 
 Remember that the name is different if the image is pulled from the registry.
 
