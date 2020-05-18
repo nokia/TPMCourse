@@ -41,3 +41,8 @@ Create an endorsment key and make it persistent + check that it is loaded:
 
 Best documentation for the TPM 2.0 tools can be found at
 [TPM software repository](https://github.com/tpm2-software/tpm2-tools/tree/master/man).
+
+
+# Getting started with TPM
+
+Under [./docs](./docs), you can find a set of files that explain different TPM concepts and contain code examples you can use with the container to get familiarized with TPM and its use cases.
