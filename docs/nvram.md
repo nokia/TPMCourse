@@ -1,25 +1,4 @@
 # Using NVRAM
-- [Using NVRAM](#using-nvram)
-  - [Handles](#handles)
-  - [Listing NVRAM Areas](#listing-nvram-areas)
-  - [Basics: Defining, Reading and Writing](#basics-defining-reading-and-writing)
-    - [Defintion](#defintion)
-    - [Writing](#writing)
-    - [Reading](#reading)
-    - [Writing and Reading Again](#writing-and-reading-again)
-    - [Removing an NVRAM area](#removing-an-nvram-area)
-  - [Counters](#counters)
-    - [Defintion](#defintion-1)
-  - [Read and Write Locking](#read-and-write-locking)
-    - [Write locking](#write-locking)
-    - [Read locking](#read-locking)
-  - [Sealing](#sealing)
-    - [Policy Creation](#policy-creation)
-    - [Defining an NVRAM area with Policies](#defining-an-nvram-area-with-policies)
-    - [Writing and Reading](#writing-and-reading)
-    - [Changes to the PCRs](#changes-to-the-pcrs)
-    - [Removal of the Policy Protected Area](#removal-of-the-policy-protected-area)
-
 The TPM contains some general purpose memory which can be used to store whatever you wish.
 Each defined area can also be protected - there are a number of mechanisms for this, and the process is called *sealing*.
 The most common way to seal NVRAM is to seal it against a particular combination of PCRs.
