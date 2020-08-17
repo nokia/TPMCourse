@@ -46,3 +46,7 @@ Best documentation for the TPM 2.0 tools can be found at
 # Getting started with TPM
 
 Under [./docs](./docs), you can find a set of files that explain different TPM concepts and contain code examples you can use with the container to get familiarized with TPM and its use cases.
+
+Currently there is a fairly comprehensive introduction to the tpm2tools set, a short guide to Infineon's eltt2 and the initial work on a short introduction to the Go-TPM libraries.
+
+The docker container mentioned above already contains the tpm2tool toolset.  
