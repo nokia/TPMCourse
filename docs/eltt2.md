@@ -1,4 +1,4 @@
-#ELTT2
+# ELTT2
 
 Infineon make a small opensource tool for interacting with the TPM 2 device called $eltt2$. While not as sophisticated as the tpm2tools or the functionality provided by, say, the GO-TPM or WolfTPM libreries, it is very small, simple and can run on small embedded devices
 
