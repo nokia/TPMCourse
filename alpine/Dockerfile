@@ -15,6 +15,7 @@ COPY open-source-tpm-alpine-spdx.rdf /
 
 RUN apk update && \
     apk add \
+    acl \
     autoconf \
     autoconf-archive \
     automake \
@@ -34,6 +35,7 @@ RUN apk update && \
     glib-dev \
     libconfig-dev \
     libgcrypt-dev \
+    shadow \
     wget
 
 RUN mkdir tpm2
