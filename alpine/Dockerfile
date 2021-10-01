@@ -1,5 +1,5 @@
 #TPM2 simulator with alpine base
-FROM alpine:latest
+FROM alpine:3.13.6
 LABEL Maintainer="Ronny Backman <ronny.backman@nokia.com>"
 LABEL version="1.0"
 LABEL description="Base image for running TPM2 Software Stack (TSS), Access \
@@ -67,15 +67,14 @@ RUN ./bootstrap && \
 
 
 WORKDIR /tpm2/ibmsim
-RUN wget --quiet --show-progress --progress=dot:giga --no-check-certificate "https://downloads.sourceforge.net/project/ibmswtpm2/ibmtpm1563.tar.gz"
-RUN tar -xf ibmtpm1563.tar.gz
+RUN wget --quiet --show-progress --progress=dot:giga --no-check-certificate "https://downloads.sourceforge.net/project/ibmswtpm2/ibmtpm1661.tar.gz"
+RUN tar -xf ibmtpm1661.tar.gz
 WORKDIR /tpm2/ibmsim/src
 RUN make -j4
 RUN cp tpm_server /bin/
 
 
 WORKDIR /
-RUN adduser -S -D tss
 
 COPY tpmStartup.sh /bin/
 
