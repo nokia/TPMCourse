@@ -65,7 +65,6 @@ These handles refer to the various authorisation hierarchies: platform, owner, e
 
 TODO: write this better
 
-
 ## Hierarchies
 The TPM has four hierachies that are used to group objects together for specific use cases. The hierarchies are:
 
@@ -88,16 +87,18 @@ Each hierarchy has a seed from which keys are derived.
 It is possible - on some TPMs - to reset these seeds rendering any keys, polcies and NVRAM areas under that hierarhy no longer accessible or usable.
 
 ### Taking Ownership
-To set the passwords on the hierarchies, typically when a TPM is first used, we set three passwords
+To set the passwords on the hierarchies, typically when a TPM is first used, we set three passwords using `tpm2_changeauth`.
 
-   * `-o` sets the owner hierarchy password
-   * `-e` sets the endorsement hierarchy password
-   * `-l` sets the lockout password
+   * `owner` or `o` sets the owner hierarchy password
+   * `endorsement` or `e` sets the endorsement hierarchy password
+   * `lockout` or `l` sets the lockout password
 
 WARNING #1: This is a potentially dangerous command. Practice with the simulator and not on a real TPM. There will be more warnings later.
 
 ```bash
-$ tpm2_takeownership -o password1 -e password2 -l password3
+$ tpm2_changeauth -c owner password1 
+$ tpm2_changeauth -c endorsement password2
+$ tpm2_changeauth -c lockout password3
 ```
 
 The lockout password is used the unlock the password from the dictionary attack state. If someone enters a password incorrectly mulitple times the TPM will lock. In some cases this lockout period might be over 24 hours!
@@ -106,18 +107,17 @@ WARNING #2: We recommend when testing and practicing the commands here that you 
 
 WARNING #3: If you forget or incorrectly set the passwords then you will lose access to the TPM....forever!
 
-To change the passwords supply the old passwords and the new passwords:
-
-   * `-O` the old owner hierarchy password
-   * `-E` the old endorsement hierarchy password
-   * `-L` the old lockout password
+To change the password, supply the old password via `-p`  and the new password.
 
 ```bash
-$ tpm2_takeownership -o passwordA -e passwordB -l passwordC -O password1 -E password2 -L password3
+$ tpm2_changeauth -c o -p password1 passwordA
+$ tpm2_changeauth -c e -p password2 passwordB
+$ tpm2_changeauth -c l -p password3 passwordC
 ```
 
 You can also clear all the passwords by supplying the lockout password like so
 
+TODO: clarify how to clear all passwords with `tpm2_changeauth`
 ```bash
 $ tpm2_takeownership -c -L passwordX
 ```
@@ -129,12 +129,12 @@ WARNING: THIS COULD RESULT IN YOU BEING LOCKED OUT OF YOUR TPM FOR EITHER A LONG
 
 To prevent continuous attempt to access objects on a TPM, the device employs a protection called dictionary lockout.
 
-When the TPM fails with a lockout error then it is necesary to supply the dictionary lockout password - stored one of the permanent handles and set with the `tpm2_takeownership` command.
+When the TPM fails with a lockout error then it is necesary to supply the dictionary lockout password - stored one of the permanent handles and set with the `tpm2_changeauth` command.
 
 The command for setting the properites of the lockout is as follows:
 
 ```bash
-tpm2_dictionarylockout -s -n 5 -t 6 -l 7 -p passwd
+tpm2_dictionarylockout -s -n 5 -t 6 -l 7 -p passwordC
 ```
 
 TODO: rewrite this so it isn't a copy of the man page.
@@ -149,32 +149,30 @@ TODO: rewrite this so it isn't a copy of the man page.
 ### Clearing the TPM
 WARNING: THIS IS A VERY DANGEROUS, NON-REVERSABLE OPERATION WHICH WILL RESET THE TPM AND REGENERATE THE SEEDS.
 
-To clear a hierarchy, we need to specify it with the `-C` option.
+To clear a hierarchy, we need to specify it with the `-c` option.
 We can use  `p` for plaform, `e` for endorsement and `o` for owner.
 For example, to clear the platform hierarchy, we would use the following command:
 
 ```bash
-$ tpm2_clear -C p
+$ tpm2_clear -c p
 ```
 
-We can also clear the lockout password mentioned in the previous section, by using `l` as an argument for the `-C` option:
+We can also clear the lockout password mentioned in the previous section, by using `l` as an argument for the `-c` option:
 
 ```bash
-$ tpm2_clear -C l
+$ tpm2_clear -c l
 ```
 
 ### Resetting Seeds
 WARNING: THIS IS A VERY DANGEROUS, NON-REVERSABLE OPERATION WHICH WILL RESET THE TPM AND REGENERATE THE SEEDS.
 
 To reset the seeds to generate the primary keys for the platform and endorsement hierarchies:
-o` for owner.
 
 ```bash
 $ tpm2_changepps
-$ tpm2_changeeps
 ```
 
-If a password has been set with `tpm2_takeownership` then the above commands take the option `-p` followed by the password for that hierarchy.
+If a password has been set with `tpm2_changeauth` then the above commands take the option `-p` followed by the password for that hierarchy.
 
 ```bash
 $ tpm2_changepps -p <password>
@@ -199,5 +197,7 @@ Examples of usage are below:
 
 For example, in normal operation PCRs 16 and 23 are defined under locality 4 which means the user can reset and extend these PCRs.
 PCR 0 is under locality 0, which means only the intial CRTM code can modify this PCR.
+
+Locality is a complex topic but knowing that the TPM might refuse certain operations on PCRs and this is the reason why will help in understanding some errors. Locality is described earlier in this tutorial and normally we don't worry about it.
 
 Locality is a complex topic but knowing that the TPM might refuse certain operations on PCRs and this is the reason why will help in understanding some errors. Locality is described earlier in this tutorial and normally we don't worry about it.
