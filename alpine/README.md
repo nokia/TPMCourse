@@ -1,5 +1,7 @@
 # TPM 2.0 alpine container
 
+NB: Refer to the README.md in the main directory for installation and usage instructions
+
 The base image for the container is **alpine:latest**.
 
 Dependecies for building the TCG TPM2 Software Stack are:
