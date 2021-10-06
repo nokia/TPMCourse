@@ -13,7 +13,7 @@ The TPM contains a number of objects such as keys, NVRAM areas, PCRs etc. These 
 
 Each object exists in one of the four authorisation hierarchies in the TPM: platform, owner, endorsement and null - thse will be explained later.
 
-Each object has a set of attributes associated with it that provides information about what kinds of authorisation are required, information about the object itself etc.
+Each object has a set of attributes associated with it that provides information about what kinds of authorisation are required, information about the object itself and so on.
 
 Finally, there is a notion called locality which further controls who can access and modify objects.
 
@@ -30,7 +30,7 @@ The upper byte(s) tells us what kind of object the handle points to.
    * `0x01c1....` - NVRAM areas that the TCG has reserved for particular organisations/uses
    * `0x01c2....` - NVRAM areas that the TCG has reserved for OEMs, eg: Infineon
    * `0x01c2....` - NVRAM areas that the TCG has reserved for platform OEMs     
-   * `0x40......` - Permanent objects (eg: refernces to hierarhies)
+   * `0x40......` - Permanent objects (eg: references to hierarchies)
 
 The handles can be listed using the `tpm2_getcap` command.
 
@@ -63,7 +63,6 @@ $ tpm2_getcap handles-permanent
 
 These handles refer to the various authorisation hierarchies: platform, owner, endorsement and null; the lockout password and other structures inside the TPM.
 
-TODO: write this better
 
 ## Hierarchies
 The TPM has four hierachies that are used to group objects together for specific use cases. The hierarchies are:
@@ -146,6 +145,9 @@ TODO: rewrite this so it isn't a copy of the man page.
    * `-n` --max-tries=NATURAL_NUMBER: Specifies the maximum number of allowed authentication attempts on DA-protected-object; after which DA is activated.
    * `-p` --auth=AUTH: The authorization value for the lockout handle.
 
+
+
+
 ### Clearing the TPM
 WARNING: THIS IS A VERY DANGEROUS, NON-REVERSABLE OPERATION WHICH WILL RESET THE TPM AND REGENERATE THE SEEDS.
 
@@ -163,6 +165,9 @@ We can also clear the lockout password mentioned in the previous section, by usi
 $ tpm2_clear -c l
 ```
 
+
+
+
 ### Resetting Seeds
 WARNING: THIS IS A VERY DANGEROUS, NON-REVERSABLE OPERATION WHICH WILL RESET THE TPM AND REGENERATE THE SEEDS.
 
@@ -178,8 +183,6 @@ If a password has been set with `tpm2_changeauth` then the above commands take t
 $ tpm2_changepps -p <password>
 ```
 
-## Attributes
-Stuff has attributes, cool eh?
 
 ## Locality
 Locality is a mechanism that is used to tell the TPM what state the system is in.
@@ -201,3 +204,10 @@ PCR 0 is under locality 0, which means only the intial CRTM code can modify this
 Locality is a complex topic but knowing that the TPM might refuse certain operations on PCRs and this is the reason why will help in understanding some errors. Locality is described earlier in this tutorial and normally we don't worry about it.
 
 Locality is a complex topic but knowing that the TPM might refuse certain operations on PCRs and this is the reason why will help in understanding some errors. Locality is described earlier in this tutorial and normally we don't worry about it.
+
+
+# Exercises
+
+1.  Explore what algorithms your TPM supports
+2.  What permanent objects are stored in the TPM?
+3.  What are these permanent objects?

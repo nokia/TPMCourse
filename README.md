@@ -70,7 +70,7 @@ Software needed for the actual end functionality is the TCG TPM2 Software Stack
 
 # Credits
 
-Ian Oliver, Nokia Bell Labs
-Ronny Backman, Nokia Bell Labs
-Gabriela Limonta, Nokia Bell Labs
-Jerome Lenssen, Nokia Mobile Networks
+*  Ian Oliver, Nokia Bell Labs
+*  Ronny Backman, Nokia Bell Labs
+*  Gabriela Limonta, Nokia Bell Labs
+*  Jerome Lenssen, Nokia Mobile Networks
