@@ -30,6 +30,31 @@ Note: in most of this section we use RSA public-private key pairs. Later on ther
 
 Note: we show the output from the commands which includes information about the keys, the public key etc. Your output will differ as each key generated is unique. Only if the same seed is used in the key derivation functions will you see the same key being generated. As we are using a simulator this can actually be forced to happen - in a production environment or on a real device, this should never happen.
 
+## TPM Memory
+TPMs have limited space for storing objects such as keys, session information etc. Different manufacturers provide different amounts of space and in some cases even behaviours when dealing with temporary objects. The IBM TPM Simulator used in the Dockerfiles has very limited storage and you'll find objects being left in the transient memory space.
+
+If you receive out of memory errors from the simulator or any TPM then check if there are objects (typically keys) in the transient memory area; for example we can use `tpm2_getcap` to display this and in this example we have two objects in the transient area.
+
+```bash
+$tpm2_getcap handles-transient
+0x80000000
+0x80000001
+```
+
+To remove these objects use the command `tpm2_flushcontext -t` and check with `tpm2_getcap` again - if nothing is reported then all worked.
+
+```bash
+$tpm2_getcap handles-transient
+0x80000000
+0x80000001
+$tpm2_flushcontext -t
+$tpm2_getcap handles-transient
+```
+
+Later on you'll see the command `tpm2_evictcontrol` which gives finer grained control over this.
+
+NOTE: normally temporary object are just temporary, but there are cases where and object is created here and is required by later operations in which case flushing the temporary area might have some other side-effects. This can be seen with certain credential and session auditing operations - these will be addressed later in this course and you don't have to worry about this for the time being.
+
 ## Hierarchies and Use Cases
 The TPM has four hierarchies.
 
@@ -61,8 +86,7 @@ To create a primary key in the owner hierarchy:
    * `-o o.ctx` means to generate a TPM context object (called o.ctx)
    * `-a ` ... gives the attributes of the key - these will be explained later
 
-```bash
-$ tpm2_createprimary -C o -g sha256 -G rsa -c o.ctx
+` tpm2_createprimary -C o -g sha256 -G rsa -c o.ctx
 name-alg:
   value: sha256
   raw: 0xb
