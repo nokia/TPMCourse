@@ -302,7 +302,7 @@ ERROR: Unable to run tpm2_nvread
 There is one solution...
 
 ```bash
-$ tpm2_undefine 0x1500018 -C o
+$ tpm2_nvundefine 0x1500018 -C o
 ```
 
 ## Sealing
