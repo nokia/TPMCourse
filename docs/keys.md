@@ -83,10 +83,11 @@ To create a primary key in the owner hierarchy:
    * `-C o` tells us to use the owner hierarchy
    * `-G rsa` tell us that we wish to generate an RSA key
    * `-g sha256` tell us that we wish to use the SHA256 hashing algorithm
-   * `-o o.ctx` means to generate a TPM context object (called o.ctx)
+   * `-c o.ctx` means to generate a TPM context object (called o.ctx)
    * `-a ` ... gives the attributes of the key - these will be explained later
 
-` tpm2_createprimary -C o -g sha256 -G rsa -c o.ctx
+```bash
+$ tpm2_createprimary -C o -g sha256 -G rsa -c o.ctx
 name-alg:
   value: sha256
   raw: 0xb
