@@ -43,7 +43,7 @@ WORKDIR /tpm2
 RUN mkdir ibmsim
 
 WORKDIR /tpm2
-RUN git clone https://github.com/tpm2-software/tpm2-tss.git && \
+RUN git clone --branch 3.0.x https://github.com/tpm2-software/tpm2-tss.git && \
     git clone https://github.com/tpm2-software/tpm2-abrmd.git && \
     git clone https://github.com/tpm2-software/tpm2-tools.git
 
