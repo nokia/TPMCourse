@@ -4,7 +4,9 @@
   - [Random Number is Hexadecimal](#random-number-is-hexadecimal)
   - [Additional Randomness](#additional-randomness)
 
-The simplest command to use with a TPM is one to obtain random numbers from the onboard hardware random number generator.
+The simplest command to use with a TPM is one to obtain random numbers from the onboard hardware random number generator. This command is a useful one as you can always use it to test if your TPM is working.
+
+The TPM can return a limited number of bytes at a time, typically between 1 and 32, though this might vary by manufacturer.
 
 ## Random Number in Raw Format
 The command `tpm2_getrandom` accepts an integer as input and returns that amount of random bytes.
@@ -18,6 +20,8 @@ $ tpm2_getrandom 20
 �
  h�HU��ns�4�y�'
 ```
+
+Note: the value returned above *is* random so what you get back should be different - the more you return the greater the probability.
 
 ## Random Number is Hexadecimal
 To return the bytes in hexadecimal format include the option `--hex`

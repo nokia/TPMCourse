@@ -8,11 +8,9 @@
   - [Resetting a PCR](#resetting-a-pcr)
   - [Extending a PCR with the hash of file](#extending-a-pcr-with-the-hash-of-file)
 
-The TPM contains a number of banks of registers used for storing measurements - typically of boot time measurements.
+The TPM contains a number of banks of registers used for storing measurements - typically of boot time measurements - these are a fundamental part of the measured boot mechanism and form a core part of the policy, sealing, reporting and attestation mechanisms that much of the idea of trusted computing is based on.
 
-The TCG TPM 2.0 standard states that there must be at least two banks, one SHA1 and one SHA256, containing 24 registers
-
-The TCG x86 Boot Standard states that some of these registers are to be populated during a trusted boot (on x86) and certain registers are used for specific purposes, eg: CRTM, BIOS measures.
+The TCG TPM 2.0 standard (as of writing) states that there must be at least two banks, one SHA1 and one SHA256, containing 24 registers. The TCG x86 Boot Standard states that some of these registers are to be populated during a measured boot and certain registers are used for specific purposes, eg: CRTM, BIOS measures.
 
 ## Reading PCRs
 
@@ -235,50 +233,96 @@ sha1:
   2 : 0x86FA03B9C721AF57DE8FB1C43CC3FE7B0A42239A
 ```
 
-## Extending a PCR with the hash of file
 
-We can also extend a PCR with the hash of a file.
-The TPM tools have a command that supports hashing a file and extending this hash to a specific PCR.
-This makes it so that we don't have to do the hashing and extension operations manually, instead it does it all in one go.
+## PCR Events
+The mechanism above using `tpm2_pcrextend` is quite a raw mechanism but it does allow very fine grained control over the hash that gets written into a given PCR in a given bank.
 
-Let's try this with PCR 23 (which we just reset).
-
-We create a file data, which contains a string, e.g. "foo".
+A better way is to pass a file or stream of data and then let the TPM hash it with *all* the available PCR bank algorithms. For this we use `tpm2_pcrevent`. If we are running against the IBM software TPM then we have four hashing functions and PCR banks available. If you are running against a real TPM then this might be different, typically SHA1 and SHA256 are provided only (check with `tpm2_getcap`). We'll use PCR16 just in case you're running against a real TPM, first we collect the PCR values from all the PCR banks.
 
 ```bash
-[fedora@vm021273 ~]$ echo "foo" > data
-[fedora@vm021273 ~]$ cat data
-foo
+[fedora@vm021273 ~]$ tpm2_pcrread sha1:16+sha256:16+sha384:16+sha512:16
+  sha1:
+    16: 0x0000000000000000000000000000000000000000
+  sha256:
+    16: 0x0000000000000000000000000000000000000000000000000000000000000000
+  sha384:
+    16: 0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  sha512:
+    16: 0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
 ```
 
-Now, let's extend PCR 23 with the hash of the file `data`:
+NOTE, sha1 and sh256 are always availble so if the above fails try `tpm2_pcrread sha1:16+sha256:16`.
+
+Using the docker container in this tutorial we'll pick an important file to hash. You can pick any file you want but for sanity and speed reasons use a small text file:
 
 ```bash
-[fedora@vm021273 ~]$ tpm2_pcrread sha1:23+sha256:23+sha384:23+sha512:23
-sha1:
-  23: 0x0000000000000000000000000000000000000000
-sha256:
-  23: 0x0000000000000000000000000000000000000000000000000000000000000000
-sha384:
-  23: 0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-sha512:
-  23: 0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+[fedora@vm021273 ~]$ ls -l /bin/tpmStartup.sh 
+-rwxr-xr-x    1 root     root           387 Nov  1 12:51 /bin/tpmStartup.sh
 ```
+
+Now run `tpm2_pcrevent`
+
 ```bash
-[fedora@vm021273 ~]$ tpm2_pcrevent 23 data
-sha1: f1d2d2f924e986ac86fdf7b36c94bcdf32beec15
-sha256: b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c
-sha384: 8effdabfe14416214a250f935505250bd991f106065d899db6e19bdc8bf648f3ac0f1935c4f65fe8f798289b1a0d1e06
-sha512: 0cf9180a764aba863a67b6d72f0918bc131c6772642cb2dce5a34f0a702f9470ddc2bf125c12198b1995c233c34b4afd346c54a2334c350a948a51b6e8b4e6b6
-```
+[fedora@vm021273 ~]$  tpm2_pcrevent /bin/tpmStartup.sh 16
+sha1: f44e0ba9cdcd6a63e850544fb4dfaf3d591becf7
+sha256: 5fa292e31e72a447c139966d22c3d72c7b01770e755dcee689fe10bd254da8c2
+sha384: 351c6cb2a73433fba19edf789fb5cb0bd3c7237ad5dcd8bdd357d247643746731631e9b8822cd8034ec2e0ad6671fb23
+sha512: 508d3a099dd4f471202511a47b42454c689d425da5bcb52d81724a21a198e2c5fbdb382b3410f67709bfc429d917091b7af0eea7159abe50f54c113a935e9843
+[fedora@vm021273 ~]$ tpm2_pcrread sha1:16+sha256:16+sha384:16+sha512:16 
+  sha1:
+    16: 0x7ACFF280464A490D5368FFFA81D296F7BB3F599C
+  sha256:
+    16: 0x9596564B3949ED1C0B8935035854713489ABC1C0FD41EB265BCBE3E8E87DC24B
+  sha384:
+    16: 0x2BD9E7CB6D0B74856CF756FE4B31A8FA8502BA2748D2D8CD579FE4967567C967622DE743C78951DE5F3AAEF47513477B
+  sha512:
+    16: 0x961B8A10F1F5E0871C6B67A6FFDCAE9E2C7E583A8EE8B135147FD20E6508F227A721688CBBDAFC58484A34B51894F70886D327C686ECF4D16332EE1108267F2A
+
+````
+
+The command shows which algorithms were run and what the hash of the input was. Note how the PCR is extended. You can use `tpm2_pcrreset` to reset these and try again, for example:
+
 ```bash
-[fedora@vm021273 ~]$ tpm2_pcrread sha1:23+sha256:23+sha384:23+sha512:23
-sha1:
-  23: 0x3D96EFE6E4A9ECB1270DF4D80DEDD5062B831B5A
-sha256:
-  23: 0x44F12027AB81DFB6E096018F5A9F19645F988D45529CDED3427159DC0032D921
-sha384:
-  23: 0x62EF60F823B16D7757851310525B8AC2927760AFDCB00382110157D81B449B1F7B559A920AF05AA8B28E5BF089A180DB
-sha512:
-  23: 0x53E36C44309E1FD589FA9495BD2ABF31794DCC6E2E2F65C20DB9ED875A583B0825440923E57E557B28A71F59AA9A3195BAC966F825E3F6D7273B8100A3FD1895
+~ # tpm2_pcrreset 16
+~ # tpm2_pcrread sha1:16+sha256:16+sha384:16+sha512:16 
+  sha1:
+    16: 0x0000000000000000000000000000000000000000
+  sha256:
+    16: 0x0000000000000000000000000000000000000000000000000000000000000000
+  sha384:
+    16: 0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  sha512:
+    16: 0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+~ # tpm2_pcrevent /bin/tpmStartup.sh 16
+sha1: f44e0ba9cdcd6a63e850544fb4dfaf3d591becf7
+sha256: 5fa292e31e72a447c139966d22c3d72c7b01770e755dcee689fe10bd254da8c2
+sha384: 351c6cb2a73433fba19edf789fb5cb0bd3c7237ad5dcd8bdd357d247643746731631e9b8822cd8034ec2e0ad6671fb23
+sha512: 508d3a099dd4f471202511a47b42454c689d425da5bcb52d81724a21a198e2c5fbdb382b3410f67709bfc429d917091b7af0eea7159abe50f54c113a935e9843
+~ # tpm2_pcrread sha1:16+sha256:16+sha384:16+sha512:16 
+  sha1:
+    16: 0x7ACFF280464A490D5368FFFA81D296F7BB3F599C
+  sha256:
+    16: 0x9596564B3949ED1C0B8935035854713489ABC1C0FD41EB265BCBE3E8E87DC24B
+  sha384:
+    16: 0x2BD9E7CB6D0B74856CF756FE4B31A8FA8502BA2748D2D8CD579FE4967567C967622DE743C78951DE5F3AAEF47513477B
+  sha512:
+    16: 0x961B8A10F1F5E0871C6B67A6FFDCAE9E2C7E583A8EE8B135147FD20E6508F227A721688CBBDAFC58484A34B51894F70886D327C686ECF4D16332EE1108267F2A
+~ # tpm2_pcrevent /bin/tpmStartup.sh 16
+sha1: f44e0ba9cdcd6a63e850544fb4dfaf3d591becf7
+sha256: 5fa292e31e72a447c139966d22c3d72c7b01770e755dcee689fe10bd254da8c2
+sha384: 351c6cb2a73433fba19edf789fb5cb0bd3c7237ad5dcd8bdd357d247643746731631e9b8822cd8034ec2e0ad6671fb23
+sha512: 508d3a099dd4f471202511a47b42454c689d425da5bcb52d81724a21a198e2c5fbdb382b3410f67709bfc429d917091b7af0eea7159abe50f54c113a935e9843
+~ # tpm2_pcrread sha1:16+sha256:16+sha384:16+sha512:16 
+  sha1:
+    16: 0x6EFE9501AB33F915D4429E3C3BE0D305CA6C40B5
+  sha256:
+    16: 0xA76D012EC62F86B8365FFD39ED2BD69A906B7163ACC7A11FDD4613FD4839626D
+  sha384:
+    16: 0x6D41DD4842F64B9DCCBD45C158D45C64F476B92209404A4F20683D022CDFCED0E7DEEDE4B59B1402FE3833301DF47248
+  sha512:
+    16: 0x096F662562CA918C9333E9835940693E1B2DAC2F0DBC44398BB3A24A0F669B4358C0FA2E4234D4C95D3040EFCDF41FFF6A181BDE85A2980743226ADE134E5B8E
+
 ```
+
+

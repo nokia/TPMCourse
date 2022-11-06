@@ -1,10 +1,12 @@
-# Getting started with TPM
+# Getting started with TPM, or, *START HERE*
 
-Here you can find tutorials, examples and documentation on TPM functionality and different commands you can run.
+Here you can find tutorials, examples and documentation on TPM functionality and different commands you can run. We use initially the tpm2-tools for Linux as the basis.
+
 These documents are meant to introduce basic concepts and commands that you can use on the TPM.
+
 The code examples included in these files can be tested with the simulator provided by the docker container available in this repository or you can test these against a real TPM.
 
-The whole course contains information relating to some of the major tool sets and libraries associated with the TPM. Currently are described basic usages for the tpm2tools command line tools for Linux and Windows, though you might notice some other files, eg: for ELTT2 which is a very simple tool from Infineon.
+We also include information for the ELTT2 tool from Infineon - another useful tool for interacting with the TPM and one that will compile and run completely stand-alone wihtout any additional libraries on pretty much any Unix/Linux system.
 
 ## Contents 
 
