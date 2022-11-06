@@ -1,0 +1,299 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+%\usepackage{parskip}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt}
+
+\begin{document}
+
+\title{TPM and Attestation Tutorial}
+\author{Ian Oliver\\Crim 2022, Oulu}
+\maketitle
+
+\tableofcontents
+
+\section{Installation}
+
+\textit{NOTE: some familiarity with Linux is assumed. Docker should run on Windows, I have never tried. If you want to remain in a pure Windows world, again I have no idea, though I would strongly recommend you do not do this, especially if using things like Bitlocker. MacOS - again no idea. Raspberry Pis - if you are lucky enough to have a TPM module then it is basically the same as any other Linux.}
+
+The TPM Course and docker images can be found at https://github.com/nokia/TPMCourse. Either download the zip file or use git clone. 
+
+Go to the docs directory and start with README.md then progress through the tutorial becomming familiar with the commands.
+
+There are two ways in which you can do this:
+\begin{itemize}
+ \item use a docker container with a software TPM and all the tools 
+ \item use your own TPM
+\end{itemize}
+
+\subsection{Installation using Docker}
+
+If you need Docker, first go here: https://docs.docker.com/engine/install/
+
+Use the follwoing command (change to the alpine directory in the tutorial)
+
+\texttt{sudo docker build -t tpmcourse:latest .}
+
+Take a while to compile; the last few steps look like this:
+
+\begin{verbatim}
+Step 28/29 : COPY tpmStartup.sh /bin/
+ ---> 20e8e3ae5ba2
+Step 29/29 : CMD ["tpmStartup.sh"]
+ ---> Running in f0503d249a58
+Removing intermediate container f0503d249a58
+ ---> ddadb286c839
+Successfully built ddadb286c839
+Successfully tagged tpmcourse:latest
+\end{verbatim}
+
+
+To run type \texttt{sudo docker run --network host -it tpmcourse:latest}
+
+NOTE: You need to explicitly allow networking from the container!!
+
+This will start and look like this: (if the Linux \# prompt doesn't appear just hit enter)
+
+\begin{verbatim}
+$ sudo docker run -it tpmcourse:latest
+/ # LIBRARY_COMPATIBILITY_CHECK is ON
+Manufacturing NV state...
+Size of OBJECT = 2600
+Size of components in TPMT_SENSITIVE = 1096
+    TPMI_ALG_PUBLIC                 2
+    TPM2B_AUTH                      66
+    TPM2B_DIGEST                    66
+    TPMU_SENSITIVE_COMPOSITE        962
+Starting ACT thread...
+TPM command server listening on port 2321
+Platform server listening on port 2322
+Command IPv4 client accepted
+Platform IPv4 client accepted
+
+/ # 
+\end{verbatim}
+
+Type \texttt{tpm2\_getrandom --hex 16} and you should see something like this:
+
+\begin{verbatim}
+# tpm2_getrandom --hex 16
+27706ef869838058eb9b0203a3d2bfcd/ # 
+\end{verbatim}
+
+Congratulations  you now have a docker image with a working software TPM - no chance of doing serious damage :-)
+
+\subsection{Running Against a Real TPM}
+
+WARNING: if you are not comfortable doing this then use the docker container.
+
+If your laptop (and all do) has a TPM (and you're running Linux) you can check this by typing
+
+\begin{verbatim}
+$ ls /dev/tpm*
+/dev/tpm0
+/dev/tpmrm0
+\end{verbatim}
+
+
+If these devices are missing then it is likely that the TPM is turned off the UEFI/BIOS. One some machines this is called the "security chip".
+
+To install the TPM2 Tools you can use sudo apt install tpm2-tools which will install version 5 on most Linux distributions, for example Debian/Ubuntu:
+
+\begin{verbatim}
+$ apt search tpm2
+Sorting... Done
+Full Text Search... Done
+
+tpm2-tools/stable 5.0-2 amd64
+  TPM 2.0 utilities
+
+$ sudo apt install tpm2-tools
+\end{verbatim}
+
+
+Or compile from source: first you need to compile tpm2-tss, tpm2-abrmd and then tpm2-tools: https://github.com/tpm2-software/tpm2-tools
+
+\section{Basic Commands}
+
+Follow the tutorial commands outlined in the tutorial:
+
+\begin{itemize}
+ \item Random
+ \item Objects
+\item Keys
+\item NVRAM
+\item PCRs
+\item Quoting
+\end{itemize}
+
+\section{Exercise - Generate EK and AK}
+
+We have an attestation server running - this is a lot more exciting if you are using your own PC with a TPM, but with a software TPM almost.  Firstly make sure you can ping the attestation server's REST API and view the user interface (instructions on this during the tutorial session).
+
+In order to enroll your machine in the attestation server you will need to construct a JSON object like this:
+
+\begin{verbatim}
+{
+    "description": "EDIT_THIS_LONGER_DESCRIPTION",
+    "endpoint": "http://127.0.0.1:8530",
+    "name": "EDIT_THIS",
+    "protocol": "A10HTTPREST",
+    "type": [
+        "tpm2.0",
+        "TPM3",
+        "xxx"
+    ]
+}
+\end{verbatim}
+
+You can either create this using the web UI or using a text editor locally and using the REST API with curl. Change the fields description, endpoint, name and make a short list of entries in the type list.
+
+To find your IP address type ip addr at the console. On mine it looks like this and you generally need the Wifi/cable interface with a name like "ens33" in this case:
+
+\begin{verbatim}
+# ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 00:0c:29:c9:0b:16 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.33/24 brd 192.168.1.255 scope global dynamic ens33
+       valid_lft 84449sec preferred_lft 84449sec
+    inet6 fe80::20c:29ff:fec9:b16/64 scope link 
+       valid_lft forever preferred_lft forever
+3: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN 
+    link/ether 02:42:20:33:4e:e1 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:20ff:fe33:4ee1/64 scope link 
+       valid_lft forever preferred_lft forever
+\end{verbatim}
+
+
+So my endpoint field becomes: \texttt{http://192.168.1.33:8530}
+
+What we need to do is add a field to the above to describe the TPM. It looks like this (your values will be different).  
+
+You need to make two keys, the EK and the AK and extract information from these. 
+
+Create the EK and place it in handles \textbf{0x810100ee} and the AK in \textbf{0x810100aa}
+
+\begin{verbatim}
+"tpm2": { "tpm0": {
+    "akhandle": "0x810100aa",
+    "akname": "000b6cd38416fbfadebd7c4312a7dd382d8e4f95449d5c5410c3148d3ba972340da1",
+    "akpem": "-----BEGIN PUBLIC KEY-----\nMIIBIjAN 
+                 <lots of stuff skipped>
+              QbBoFA8Y/w\nWQIDAQAB\n-----END PUBLIC KEY-----\n",
+    "ekhandle": "0x810100ee",
+    "ekname": "000b59ff58093c05599af508562c840430dd74a7e78784da1abadf7ef4d9811a38e4",
+    "ekpem": "-----BEGIN PUBLIC KEY-----\nMIIBIjAN
+                 <lots of stuff skipped>    
+              AQAB\n-----END PUBLIC KEY-----\n"
+            } 
+    } 
+\end{verbatim}
+
+
+
+Bonus points for finding out if your laptop made a measured boot in UEFI mode. If so add this field too:
+
+\begin{verbatim}
+    "uefi": {
+        "eventlog": "/sys/kernel/security/tpm0/binary_bios_measurements"
+    }
+\end{verbatim}
+
+
+Create your entry in the attestation server!
+
+\section{Running a Trust Agent}
+
+The attestation server needs to communicate with your TPM.  You can find it here: https://github.com/nokia/AttestationEngine and use git or download the zip. For example:
+
+\begin{verbatim}
+# git clone https://github.com/nokia/AttestationEngine.git
+Cloning into 'AttestationEngine'...
+remote: Enumerating objects: 6621, done.
+remote: Counting objects: 100% (1364/1364), done.
+remote: Compressing objects: 100% (645/645), done.
+remote: Total 6621 (delta 650), reused 1208 (delta 634), pack-reused 5257
+Receiving objects: 100% (6621/6621), 7.89 MiB | 5.79 MiB/s, done.
+Resolving deltas: 100% (3575/3575), done.
+\end{verbatim}
+
+
+The directory you want is \texttt{t10/nut10} inside this distribution
+
+If you are running on plain Linux then you will need to ensure python3 and pip3 are installed and then ensure that the python packages flask and pyyaml are also there
+
+\begin{verbatim}
+pip3 install flask
+pip3 install pyyaml
+\end{verbatim}
+
+
+On the docker container you need to run the following commands:
+
+\begin{verbatim}
+apk add py3-pip
+pip3 install flask
+pip3 install pyyaml
+\end{verbatim}
+
+To run the trust agent you need to be administrator/sudo. In the docker container you are already the admin
+
+\texttt{python3 ta.py}
+
+You can check if it is working by typing \texttt{http://<ip address>:8530}into a browser, you should get a description of the trust agent back.
+
+\section{Exercise - Collect PCRs}
+Now go to the attestation server and try collecting the PCRs for your device.
+
+
+\section{Exercise - Modify PCRs}
+Stop the trust agent and modify some of the PCRs however you wish. On a normal laptop only PCRs 16 and 23 should be modified with \texttt{tpm2\_extend} or \texttt{tpm2\_event}  (bonus: what's the difference between these commands?)
+
+\section{Exercise - Quotes}
+Using quotes find out some expected values for your machine - for a live TPM these values are in PCRs 0 through to 7 and describe how your machine booted - the policies are called CRTM, SRTM etc. 
+
+Find the itemid for your machine from the attestation server UI and also the policy itemid. Then create an expected value for your machine. They look like this but your fields will differ. Give the name something very obvious to yourselves. Obviously change the elementID and policyID fields!!!
+
+\begin{verbatim}
+{
+    "description": "Ian laptop CRTM Value",
+    "elementID": "37429f53-c3c2-447d-b6b7-d515c916c179",
+    "evs": {
+        "firmwareVersion": "2a1aa04410004700",
+        "pcrDigest": "a0c06cb059eb8ebf217b6dbab55297a352fc69c2000273b33914003cfbbe3117"
+    },
+
+    "name": "Ian CRTM",
+    "policyID": "2af3b502-b3b4-4c7b-a021-11c4d8224e4f",
+    "type": "tpm2_attestedValuePCRdigest"
+}
+\end{verbatim}
+
+
+Before you submit this from the quote you just made (see the attestation claims page) find the firmware version of your TPM and the pcrDigest for that particular attestation.
+
+Remember to restart the trust agent!
+
+\section{Exercise - Attest, Change, Reboot, Update, Attest}
+
+Change some PCRs, reboot your laptop, maybe even make an update if you're running outside of a container, eg:  \texttt{sudo apt update} followed by \texttt{sudo apt upgrade}.  Bonus if this invoves an update to the kernel.
+
+Reattest.
+
+What changed?
+
+\section{Exercise - Forensics}
+Go to the forensics capture interface. Explore what went on there?
+
+
+
+\end{document}
