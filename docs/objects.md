@@ -86,6 +86,8 @@ Each hierarchy has a seed from which keys are derived.
 It is possible - on some TPMs - to reset these seeds rendering any keys, polcies and NVRAM areas under that hierarhy no longer accessible or usable.
 
 ### Taking Ownership
+Note, there used to be a command called `takeownership` which is kind of a hangover from the TPM 1.2 days when such a concept existed. It was modified to call the TPM 2.0 equivalents and has over the years caused some confusion about what taking ownership actually meant. TPM 2.0 has hierarchies, while TPM 1.2 didn't ... if someone is talking about taking ownership then it is time for a longer conversation on exactly what they want. This is not a discussion we will have here but it is good to be aware.
+
 To set the passwords on the hierarchies, typically when a TPM is first used, we set three passwords using `tpm2_changeauth`.
 
    * `owner` or `o` sets the owner hierarchy password
@@ -116,10 +118,6 @@ $ tpm2_changeauth -c l -p password3 passwordC
 
 You can also clear all the passwords by supplying the lockout password like so
 
-TODO: clarify how to clear all passwords with `tpm2_changeauth`
-```bash
-$ tpm2_takeownership -c -L passwordX
-```
 
 
 
@@ -205,9 +203,3 @@ Locality is a complex topic but knowing that the TPM might refuse certain operat
 
 Locality is a complex topic but knowing that the TPM might refuse certain operations on PCRs and this is the reason why will help in understanding some errors. Locality is described earlier in this tutorial and normally we don't worry about it.
 
-
-# Exercises
-
-1.  Explore what algorithms your TPM supports
-2.  What permanent objects are stored in the TPM?
-3.  What are these permanent objects?

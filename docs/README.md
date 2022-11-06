@@ -21,7 +21,9 @@ A Summary of all commands introduced is found in:
 
 * [Command Summary](./commandSummary.md) provides a summary of some of the TPM commands available and their posible use cases.
 
+A set of exercises for the above can be found here:
 
+* [Exercises](./exercises.md) exercises (surprisingly)
 
 
 ## ELTT2

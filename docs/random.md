@@ -38,9 +38,3 @@ $ echo -n "myrandomdata" | tpm2_stirrandom
 $ dd if=/dev/urandom bs=1 count=64 > myrandom.bin
 $ tpm2_stirrandom < ./myrandom.bin
 ```
-
-# Exercises
-
-1.  Generate a single random value 
-2.  What is the larger amount of random values your TPM can generate+
-3.  Write a small script that outputs a random value between, say 1 and 6.  a TPM backed dice.
