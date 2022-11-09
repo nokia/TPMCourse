@@ -128,6 +128,7 @@ Follow the tutorial commands outlined in the tutorial:
 \end{itemize}
 
 \section{Exercise - Generate EK and AK}
+\textbf{NOTE: if you are using the TPM simualator via the docker container, you will lose these if you exit the docker container. Good news is you'll get practice recreating them if you do this}
 
 We have an attestation server running - this is a lot more exciting if you are using your own PC with a TPM, but with a software TPM almost.  Firstly make sure you can ping the attestation server's REST API and view the user interface (instructions on this during the tutorial session).
 
@@ -181,6 +182,10 @@ What we need to do is add a field to the above to describe the TPM. It looks lik
 You need to make two keys, the EK and the AK and extract information from these. 
 
 Create the EK and place it in handles \textbf{0x810100ee} and the AK in \textbf{0x810100aa}
+
+\textbf{NOTE: take note of which handles you used for the above keys!! If you created the EK and AK earlier then you can use those handles too. Remember the caveat about exiting the docker container}
+
+\textbf{NOTE: The attestation server DOES NOT do an JSON validation - it will show a crash page. Just hit the back button and re enter. A GOOD HINT is to use a text editor or a JSON validator site to ge the below correct and then copy and paste it into the attesation engine UI}
 
 \begin{verbatim}
 "tpm2": { "tpm0": {
@@ -284,6 +289,7 @@ Before you submit this from the quote you just made (see the attestation claims 
 Remember to restart the trust agent!
 
 \section{Exercise - Attest, Change, Reboot, Update, Attest}
+\textbf{NOTE: if you used 0x810100AA for atteststion key then good, if not then you need to enter this into the call parameters section of the atteststion server UI page}
 
 Change some PCRs, reboot your laptop, maybe even make an update if you're running outside of a container, eg:  \texttt{sudo apt update} followed by \texttt{sudo apt upgrade}.  Bonus if this invoves an update to the kernel.
 
