@@ -8,7 +8,7 @@ While this course is designed to be used as part of a tutorial session it can be
 
 ## Installation
 
-There are other ways to do install, other ways to do each step, but this is common and clear.
+There are other ways to complete the install, other ways to do each step, but this is common and clear.
 
 Start your install at a terminal window on a linux system.  If you are using a Windows computer, create a linux VM (possibly using VirtualBox), such as the latest Ubuntu system, and begin your install from the linux VM command line.
 
@@ -18,7 +18,7 @@ While in your home directory, install the TPMCourse in your linux VM by using gi
 git clone https://github.com/nokia/TPMCourse.git
 ```
 
-Git will clone (copy) files from the remote TPMCourse repository on the Nokia github to your linux system.  However, your linux system may not yet have the git tool.  You may need to install it before you start the git clone. (The linux system should tell you how to install it as part of its negative response to your initial attempt.  
+Git will clone (copy) files from the remote TPMCourse repository on the Nokia github to your linux system.  However, your linux system may not yet have the git tool.  If you don't have it, you will need to install it in order to complete the git clone. (The linux system should tell you how to install it as part of its negative response to your initial attempt.)  
 https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
 When the clone is complete, your home directory should have a new TPMCourse sub-directory.  Move to this directory on your linux system and list the files and directories. It should look like the Nokia github TPMCourse repository from which you copied, including an alpine directory, a docs directory, a src directory, a license file and a README file.  Now you are ready to build the container that will host the TPM simulator, the TPM tools, and the alpine linux operating system which is a simple secure linux that will always have the libraries and configurations needed for this course. 
