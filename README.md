@@ -8,14 +8,33 @@ While this course is designed to be used as part of a tutorial session it can be
 
 ## Installation
 
-Or actually, how to run the docker containers which provide the tools and the IBM TPM Simulator so you can safely practice without running against your or someone else's real TPM.
+There are other ways to complete the install, other ways to do each step, but this is common and clear.
 
-We provide a Dockerfile for the Linux Alpine distribution which when built downloads the various libraries and tools to interact with a TPM and also the IBM TPM Simulator
+Start your install at a terminal window on a linux system.  If you are using a Windows computer, create a linux VM (possibly using VirtualBox), such as the latest Ubuntu system, and begin your install from the linux VM command line.
+
+While in your home directory, install the TPMCourse in your linux VM by using git.  The command is
+
+```bash
+git clone https://github.com/nokia/TPMCourse.git
+```
+
+Git will clone (copy) files from the remote TPMCourse repository on the Nokia github to your linux system.  However, your linux system may not yet have the git tool.  If you don't have it, you will need to install it in order to complete the git clone. (The linux system should tell you how to install it as part of its negative response to your initial attempt.)  
+https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
+When the clone is complete, your home directory should have a new TPMCourse sub-directory.  Move to this directory on your linux system and list the files and directories. It should look like the Nokia github TPMCourse repository from which you copied, including an alpine directory, a docs directory, a src directory, a license file and a README file.  Now you are ready to build the container that will host the TPM simulator, the TPM tools, and the alpine linux operating system which is a simple secure linux that will always have the libraries and configurations needed for this course. 
+
+Note, for now, let's assume you are going to work on a TPM Simulator, not an actual TPM in your system hardware.  This course could be adapted to work with a real TPM, but that will not be addressed here.  The TPM simulator is convenient for learning, because if you mess up something, only the simulator is affected and the simulator can easily be restored (by restart). 
+
+To build the TPMCourse container, docker must be available on your linux VM.  If you enter the docker build command below and it starts the 29 step build, you are on your way.  If it fails, the system will provide the instructions on how to install docker on your system.  After docker install, you may receive "Got permission denied while trying to connect to the Docker daemon socket...".  If so, you have a permission issue.  See "How to Fix Docker Permission Denied Error on Ubuntu":
+https://linuxhandbook.com/docker-permission-denied/#:~:text=deal%20with%20it.-,Fix%201%3A%20Run%20all%20the%20docker%20commands%20with%20sudo,the%20Docker%20daemon%20socket'%20anymore.
+
 
 ```bash
 cd alpine
 docker build -t tpmcourse:latest .
 ```
+
+To see how the build executes, see the Dockerfile in the alpine directory which when built downloads the various libraries and tools to interact with a TPM and also the IBM TPM Simulator
 
 If all works successfully, after about 29 stages, you can type the following command to run the container in interactive mode.
 
