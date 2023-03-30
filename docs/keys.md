@@ -262,7 +262,7 @@ ERROR: Unable to run tpm2_evictcontrol
 To remove the key the process is such
 
 ```bash
-$ tpm2_evictcontrol 0x81010004
+$ tpm2_evictcontrol -c 0x81010004
 $ tpm2_getcap handles-persistent
 ```
 
