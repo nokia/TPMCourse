@@ -42,6 +42,13 @@ If all works successfully, after about 29 stages, you can type the following com
 docker run -it tpmcourse:latest
 ```
 
+NOTE: the above might need to be run as sudo, eg:
+
+```bash
+sudo docker run -it tpmcourse:latest
+```
+
+
 The following will be printed out. This tells us that the TPM simulator is runnig on ports 2321 and 2322 and at the end we have a command line prompt. We're running the `ash` command line interpreter.
 
 ```
