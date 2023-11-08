@@ -1,0 +1,107 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+%\usepackage{parskip}
+\usepackage{url}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt}
+
+\begin{document}
+
+\title{TPM Tutorial Exercises}
+\author{Ian Oliver\\Crim 2023\\November 16th 2023\\University of Oulu}
+\maketitle
+
+\tableofcontents
+
+
+\section{Installation}
+The course is found at \url{https://github.com/nokia/TPMCourse}. The README file contains the installation instructions carefully and make sure that you have this working before the tutorial. \textbf{READ THE INSTRUCTIONS CAREFULLY}.
+
+The docker based installation has been tested in Linux (various Ubuntus and Debians).
+
+If you are running on Windows, Mac or something even more exotic (you mean you don't an IBM zSeries at home?!) then it is probably much easier to build a virtual machine using VMWare Player or VirtualBox. Download Ubuntu desktop or server as you wish (Desktop has a nice UI!) and install and run it in your VM.
+
+For those of you who can unpick the Dockerfile and figure out how to install everything on a bare-metal Linux box with a real TPM...good luck. If you brick your TPM, corrupt your OS, lose encryption keys or anything else, I did warn you and take no responsibility.
+
+Once you get it working proceed to the exercises in section \ref{theexercises} of this document - it is immediately after this.
+
+
+
+\section{Tutorial and TPM Familiarity}\label{theexercises}
+Read each section carefully and take notes as you go along. If you break your simulated TPM, exit docker and restart. Note, if you had keys or data in that simulated TPM it will be lost on each startup.
+
+Good Advice: keep a log of each command you run in a separate textfile - easy to copy and paste these back in later and also makes debugging easier.
+
+
+\subsection{Basic Commands}
+Follow the tutorial commands outlined in the tutorial in this order. You will find these files under the `docs` director of the downloaded course or directly on the Github pages at \url{https://github.com/nokia/TPMCourse/blob/master/docs/STARTHERE.md}
+
+Take note of the warning in section \ref{commandparameters} below.
+
+Take notes as you go along, \textbf{draw pictures}, keep a log of commands and don't be afraid to restart the simulator if you need. 
+
+\begin{itemize}
+\item Random
+\item Objects
+\item Keys  (see section \ref{flush} below)
+\item NVRAM
+\item PCRs
+\item Quoting
+\end{itemize}
+
+\subsection{Command Parameters}\label{commandparameters}
+Sometimes parameters to commands change - we use the latest TPM2 Tools and sometimes things do change and the course might not be fully updated. In this case, either make an issue in github or make a fork, change and then a pull request - your contributions either way will be very much appreciated.
+
+
+\subsection{TPM Memory and Flush Context}\label{flush}
+This can also be found in the section on key generation, but I will repeat it here. See also \url{https://github.com/nokia/TPMCourse/blob/master/docs/keys.md#tpm-memory}
+
+TPMs have limited space for storing objects such as keys, session information etc. Different manufacturers provide different amounts of space and in some cases even behaviours when dealing with temporary objects. The IBM TPM Simulator used in the Dockerfiles has very limited storage and you'll find objects being left in the transient memory space.
+
+If you receive out of memory errors from the simulator or any TPM then check if there are objects (typically keys) in the transient memory area; for example we can use \texttt{tpm2\_getcap} to display this and in this example we have two objects in the transient area.
+
+\begin{verbatim}
+$tpm2_getcap handles-transient
+0x80000000
+0x80000001
+\end{verbatim}
+
+To remove these objects use the command \texttt{tpm2\_flushcontext -t} and check with \texttt{tpm2\_getcap} again - if nothing is reported then all worked.
+
+\begin{verbatim}
+$tpm2_getcap handles-transient
+0x80000000
+0x80000001
+$tpm2_flushcontext -t
+$tpm2_getcap handles-transient
+\end{verbatim}
+
+\section{Exercises}
+Follow each of these in turn. Refer back to the tutorial section and your notes.
+
+\subsection{Generate Keys}
+Generate an RSA key under one of the hierarchies. I suggest creating a primary key in owner first and then deriving from that.
+
+Using this key encrypt a small amount of data, eg: 16 characters maximum.
+
+Decrypt that data and demonstrate that that the encrypt/decrypt works.
+
+\subsection{Generate and EK and AK}
+The EK is the device's identity in a way. Generate this.
+
+Then geneate an attestation key (AK).
+
+Make both of these persistent at suitable handles.
+
+\subsection{PCRs}
+List the PCRs and use \textit{tpm2\_pcrevent} to extend certain some PCRs.  Pick some small files to hash with this command - hashing takes time and the TPM isn't a cryptoaccelerator!
+
+If you can reset the PCRs (something you can't do without a reboot in reality!), reset them and extend the PCRs using the same data but in different order. Compare what you get.
+
+
+
+
+\end{document}
+
+

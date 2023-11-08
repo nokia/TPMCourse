@@ -34,6 +34,13 @@ cd alpine
 docker build -t tpmcourse:latest .
 ```
 
+NOTE: the above might need to be run as sudo, eg:
+
+```bash
+sudo docker build -t tpmcourse:latest .
+```
+
+
 To see how the build executes, see the Dockerfile in the alpine directory which when built downloads the various libraries and tools to interact with a TPM and also the IBM TPM Simulator
 
 If all works successfully, after about 29 stages, you can type the following command to run the container in interactive mode.
@@ -68,6 +75,8 @@ Platform IPv4 client accepted
 ^C
 / # 
 ```
+
+NOTE: sometimes the `#`` prompt doesn't appear...hit enter, the it should.
 
 To test type the TPM command `tpm2_getrandom` to obtain a random number:
 
