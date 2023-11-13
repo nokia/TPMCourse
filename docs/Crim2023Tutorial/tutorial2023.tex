@@ -77,6 +77,13 @@ $tpm2_flushcontext -t
 $tpm2_getcap handles-transient
 \end{verbatim}
 
+\subsection{Communicating with the TPM}
+If you are running against a real TPM, make sure you have access to the device. For example on Linux this means access to /dev/tpm0 and /dev/tpmrm0. In most distributions, and after installing the TPM2 Tools you will need to add your user to the tss group to get access to /dev/tpm0.
+
+If you are running against the TPM simulator, then it is likely you will need to set an environment variable to direct commands to the simulator. Set this \texttt{export TPM2TOOLS\_TCTI="mssim:host=localhost,port=2321"}
+
+You can run the simulator on a machine with a physical TPM too, just set the environment variable above to direct tpm2* commands to the correct place.
+
 \section{Exercises}
 Follow each of these in turn. Refer back to the tutorial section and your notes.
 
