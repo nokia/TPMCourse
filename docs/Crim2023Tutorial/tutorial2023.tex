@@ -120,6 +120,26 @@ Reboot your machine and enter the UEFI setup page. If you can find something \te
 
 Did any PCRs? change - see section \ref{pcrs}.
 
+\subsection{Quotes}
+Take two quotes of your machine for the same PCRs. Use \textit{tpm2\_print} them. How do their differ?
+
+Suspend your machine, wake it up and take a quote, what has changed?
+
+Reboot your machine and take a quote, what has changed?
+
+\textbf{NB: this following exercise is dangeous and should not be attempted - disk corruption, breaking hardware etc. You have been warned}
+
+Remove the powersupply and pull the battery from your machine if you can. Reboot, take a quote and what does it tell you?
+
+\subsection{Updates}
+Linux has various ways of updating itself, eg: \textit{apt update/upgade, yum etc...} Take quotes, copies of the event log and PCRs \textit{BEFORE} the update. Reboot, and take quotes, eventlog and PCRs again.  What has changed.
+
+Linux has a firmware update mechanism called LVFS and is used via the command \textit{fwupdmgr}. Take quotes, copies of the event log and PCRs \textit{BEFORE} the update. Reboot, and take quotes, eventlog and PCRs again.  What has changed.
+
+
+
+
+
 \end{document}
 
 
