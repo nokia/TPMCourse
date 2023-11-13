@@ -2,8 +2,9 @@
 \contentsline {section}{\numberline {2}Tutorial and TPM Familiarity}{2}{}%
 \contentsline {subsection}{\numberline {2.1}Basic Commands}{2}{}%
 \contentsline {subsection}{\numberline {2.2}Command Parameters}{2}{}%
-\contentsline {subsection}{\numberline {2.3}TPM Memory and Flush Context}{2}{}%
+\contentsline {subsection}{\numberline {2.3}TPM Memory and Flush Context}{3}{}%
 \contentsline {section}{\numberline {3}Exercises}{3}{}%
 \contentsline {subsection}{\numberline {3.1}Generate Keys}{3}{}%
 \contentsline {subsection}{\numberline {3.2}Generate and EK and AK}{3}{}%
-\contentsline {subsection}{\numberline {3.3}PCRs}{3}{}%
+\contentsline {subsection}{\numberline {3.3}PCRs}{4}{}%
+\contentsline {subsection}{\numberline {3.4}UEFI EventLog}{4}{}%

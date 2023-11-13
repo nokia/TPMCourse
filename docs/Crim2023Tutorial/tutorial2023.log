@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.6.4)  8 NOV 2023 10:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.6.4)  13 NOV 2023 16:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -128,10 +128,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 [2] [3] [4] (./tutorial2023.aux) ) 
 Here is how much of TeX's memory you used:
- 1169 strings out of 477975
- 19750 string characters out of 5839282
+ 1170 strings out of 477975
+ 19756 string characters out of 5839282
  1857330 words of memory out of 5000000
- 21353 multiletter control sequences out of 15000+600000
+ 21354 multiletter control sequences out of 15000+600000
  518313 words of font info for 52 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  57i,6n,62p,387b,206s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -143,7 +143,7 @@ sfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on tutorial2023.pdf (4 pages, 110222 bytes).
+Output written on tutorial2023.pdf (4 pages, 117000 bytes).
 PDF statistics:
  57 PDF objects out of 1000 (max. 8388607)
  35 compressed objects within 1 object stream

@@ -8,7 +8,7 @@
 
 \begin{document}
 
-\title{TPM Tutorial Exercises}
+\title{TPM Tutorial Worksheet}
 \author{Ian Oliver\\Crim 2023\\November 16th 2023\\University of Oulu}
 \maketitle
 
@@ -94,13 +94,31 @@ Then geneate an attestation key (AK).
 
 Make both of these persistent at suitable handles.
 
-\subsection{PCRs}
+\subsection{PCRs}\label{pcrs}
 List the PCRs and use \textit{tpm2\_pcrevent} to extend certain some PCRs.  Pick some small files to hash with this command - hashing takes time and the TPM isn't a cryptoaccelerator!
 
 If you can reset the PCRs (something you can't do without a reboot in reality!), reset them and extend the PCRs using the same data but in different order. Compare what you get.
 
 
+\subsection{UEFI EventLog}
+\textbf{You must be running on a Linux machine with UEFI enabled}
 
+Read the UEFI eventlog which can be found at \textit{/sys/kernel/security/tpm0} using \textit{tmp2\_eventlog}. You will need to use sudo and write the output of the command to your home directory or somewhere suitable. Give this file a suitable name - you will need it later. Read it with a text editor.
+
+\begin{itemize}
+ \item What does the event log tell you?  
+ \item How does it relate to the PCRs?
+\end{itemize}
+
+Reboot your machine and enter the UEFI setup page. If you can find something \textit{SAFE} to change, do it. If you are unsure, don't touch anything. Save and Exit and let the machine reboot.
+
+\begin{itemize}
+ \item Read the event log again as above
+ \item Compare it with the early event log you saved (you did this, yes?)
+ \item What has changed
+\end{itemize}
+
+Did any PCRs? change - see section \ref{pcrs}.
 
 \end{document}
 
