@@ -7,7 +7,7 @@ Some interesting exercises for you - this is incomplete but, let's see...
 3 Simple exercises. Number #3 requires some bash/csh script programming.
 
 1.  Generate a single random value 
-2.  What is the larger amount of random values your TPM can generate+
+2.  What is the largest amount of random values your TPM can generate+
 3.  Write a small script that outputs a random value between, say 1 and 6.  a TPM backed dice.
 
 ## Objects
