@@ -11,7 +11,7 @@
 
 The TPM contains a number of objects such as keys, NVRAM areas, PCRs etc. These are addressed using handles - basically a pointer to the object.
 
-Each object exists in one of the four authorisation hierarchies in the TPM: platform, owner, endorsement and null - thse will be explained later.
+Each object exists in one of the four authorisation hierarchies in the TPM: platform, owner, endorsement and null - these will be explained later.
 
 Each object has a set of attributes associated with it that provides information about what kinds of authorisation are required, information about the object itself and so on.
 
@@ -77,7 +77,7 @@ Each hierarchy is used to define an authorisation to access and use the objects 
 One use of the hierarchies is during the manufacturing and provisioning of a TPM:
 
    * The manufacturer may place keys or NVRAM areas under the Endorsement hierarchy and then lock it
-   * The OEM my place keys or NVRAM areas under the Platform hierarchy and then lock it (see note below)
+   * The OEM may place keys or NVRAM areas under the Platform hierarchy and then lock it (see note below)
    * The Owner hierarchy is open to the end-user
    * The null hierarchy is used internally by the TPM for anything temporary, eg: session information etc. 
 
