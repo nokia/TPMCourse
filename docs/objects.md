@@ -83,7 +83,7 @@ One use of the hierarchies is during the manufacturing and provisioning of a TPM
 
 The reason for locking these areas is to facilitate revocation of keys and other data, as well as keeping manufacturer or OEM specific data safe.
 
-Each hierarchy has a seed from which keys are derived. It is possible - on some TPMs - to reset these seeds rendering any keys, polcies and NVRAM areas under that hierarhy no longer accessible or usable.
+Each hierarchy has a seed from which keys are derived. It is possible - on some TPMs - to reset these seeds rendering any keys, policies and NVRAM areas under that hierarhy no longer accessible or usable.
 
 The platform hierarchy is interesting as its password is always reset when a power cycle happens. This is because this hierarchy was aimed at platform manufacturers and OEMs who want control over their parts of the system, eg: firmware signatures etc. But, if something needed changing, eg: a firmware update, then it would be necessary to unlock this hierarchy. The solution is that the platform hierarchy is open until device start and then a random password written there to lock it for the duration of usage. Unlocking this hierarchy would be part of a hardware update process. 
 
