@@ -10,6 +10,7 @@
     - [Reading the Public Part of a Key](#reading-the-public-part-of-a-key)
   - [Using Keys](#using-keys)
     - [Symmetric Encryption and Decryption](#symmetric-encryption-and-decryption)
+    - [Software Encryption and Decryption](#software-encryption-and-decryption)
     - [Asymmetric Encryption and Decryption](#asymmetric-encryption-and-decryption)
     - [Signing and Verification](#signing-and-verification)
   - [Loading External Keys](#loading-external-keys)
@@ -491,6 +492,35 @@ $ cat mysecret.enc | hexdump
 0000000 8623 6c6c 17f3 8530 6868 1745          
 000000c
 ```
+
+### Software Encryption and Decryption
+
+Not all TPMs will support the functionality provided by tpm2_encryptdecrypt (an optional part of the TPM specification).
+
+In these instances you can use the TPM to seal a key, then pass it into an external library (such as OpenSSL) to handle the encryption and decryption process instead.
+
+We can use the TPM's random number generator to create a 256 bit symetric key for our crypto library. 
+
+```bash
+$ tpm2_getrandom 32 > symmetrickey.key
+```
+*It's worth noting here that a real implementation should never write an unencrypted key to disk. Instead it should be processed in a trusted environment and erased when no longer required.*
+
+We need to seal this key using the TPM. As with previous examples, the library will return a public and private key pair that can be used to retrieve the data later. 
+
+```bash
+$ tpm2_create -C o.ctx -i symmetrickey.key -u key.pub -r key.priv
+```
+
+*In addition to sealing the key against the TPM, platform configuration registers can also be used to increase security here. See [PCRs](./pcrs.md).*
+
+To access the key and encrypt/decrypt your files, load the public and private key into the TPM and unseal the data. The unsealing operation should only be performed in a trusted environment, as it again exposes the plaintext symmetric key.
+
+```bash
+$ tpm2_load -C o.ctx -u key.pub -r key.priv -c key.ctx
+$ tpm2_unseal -c key.ctx > unsealedsymmetrickey.key
+```
+Encryption/decryption can now be performed using your preferred crypto library and the unsealed key. 
 
 ### Asymmetric Encryption and Decryption
 We can also use the TPM to do asymmetric encyption and decryption.
