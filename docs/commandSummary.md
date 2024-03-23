@@ -34,6 +34,7 @@ The TPM2 Tools commands all start with `tpm2_`. Other useful Linux command-line 
    * tpm2_sign
    * tpm2_verify
 
+   * tpm2_loadexternal
    * openssl
 
 ## NVRAM Management
